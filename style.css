@@ -1,0 +1,1095 @@
+/****** Sommaire *********************************************************************************
+
+Regle général : -- ligne 25 à 100
+
+Partie n°1 : -- Header -- ligne 104 à 145
+             
+Partie n°2 : -- Slider -- ligne 149 à 317
+
+Partie n°3 : -- Nos Services -- ligne 321 à 491
+
+Partie n°4 : -- Nos Projet ( Portfolio ) -- ligne 495 à 684
+
+Partie n°5 : -- Carte et contact -- ligne 688 à 776
+
+Partie n°6 : -- Footer -- ligne 780 à 816
+
+Partie n°7 : -- Media queries - max 1275px -- ligne 824 à 841
+                              - max 1000px -- ligne 843 à 880
+                              - max 800px -- ligne 882 à 304
+                              - min 641px -- ligne 906 à 910
+                              - max 640px -- ligne 912 à 1080
+
+*************************************************************************************************/
+
+/* Regle général */
+
+/* Fonts */
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('fonts/Roboto-Bold-webfont.eot');
+    src: url('fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Roboto-Bold-webfont.woff2') format('woff2'),
+    url('fonts/Roboto-Bold-webfont.woff') format('woff'),
+    url('fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+    url('fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Roboto-Regular-webfont.woff2') format('woff2'),
+    url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+    url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+    url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('fonts/Roboto-Black-webfont.eot');
+    src: url('fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Roboto-Black-webfont.woff2') format('woff2'),
+    url('fonts/Roboto-Black-webfont.woff') format('woff'),
+    url('fonts/Roboto-Black-webfont.ttf') format('truetype'),
+    url('fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('fonts/Roboto-Medium-webfont.eot');
+    src: url('fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Roboto-Medium-webfont.woff2') format('woff2'),
+    url('fonts/Roboto-Medium-webfont.woff') format('woff'),
+    url('fonts/Roboto-Medium-webfont.ttf') format('truetype'),
+    url('fonts/Roboto-Medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+h2 {
+    font-family: 'robotobold', serif;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 38px;
+}
+
+h2 + p {
+    text-align: center;
+}
+
+p {
+    font-family: 'robotoregular', serif;
+}
+
+figcaption {
+    font-family: 'robotoregular', serif;
+}
+
+a {
+    font-family: 'robotoregular', serif;
+}
+
+/* ************************************************************************************************ */
+
+/* Partie n°1 -- Header */
+
+/* ************************************************************************************************ */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 900;
+    opacity: 0.9;
+}
+
+#logo {
+    padding: 15px 0 15px 100px;
+}
+
+/* Barre de nvigation */
+
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 35px 100px 30px 0;
+    overflow: hidden;
+    margin: -8px 0 0 0;
+}
+
+#navbar li a {
+    color: black;
+    text-decoration-line: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 25px 15px 0px 15px;
+}
+
+#navbar li a:hover {
+    border-top: 3px solid #148d9d;
+    padding-top: 30px;
+}
+
+/* ************************************************************************************************ */
+
+/* Partie n°2 -- Slider */
+
+/* ************************************************************************************************ */
+
+#slideshow {
+    position: relative;
+    margin: 92px 0 0 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider figure img {
+    width: 50%;
+    float: left;
+}
+
+.slider figure {
+    position: relative;
+    width: 200%;
+    margin: 0 0 0 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 15s slidy infinite;
+}
+
+/* keyframes */
+
+@keyframes slidy {
+    0%,
+    45%,
+    100% {
+        left: 0
+    }
+    50%,
+    95% {
+        left: -100%
+    }
+}
+
+@-webkit-keyframes slidy {
+    0%,
+    45%,
+    100% {
+        left: 0
+    }
+    50%,
+    95% {
+        left: -100%
+    }
+}
+
+@-moz-keyframes slidy {
+    0%,
+    45%,
+    100% {
+        left: 0
+    }
+    50%,
+    95% {
+        left: -100%
+    }
+}
+
+@-o-keyframes slidy {
+    0%,
+    45%,
+    100% {
+        left: 0
+    }
+    50%,
+    95% {
+        left: -100%
+    }
+}
+
+/*Boutton du slider*/
+
+.fa-angle-left {
+    position: absolute;
+    top: 40%;
+    left: -5px;
+    z-index: 100;
+    font-size: 1.8em;
+    color: white;
+    padding: 12px;
+    border: 0px solid;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.fa-angle-right {
+    position: absolute;
+    top: 40%;
+    right: -5px;
+    z-index: 100;
+    font-size: 1.8em;
+    color: white;
+    padding: 12px;
+    border: 0px solid;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    background-color: black;
+    opacity: 0.7;
+}
+
+/* Image de remplacement du slider affichée uniquement en petite résolution */
+
+#img_mobile {
+    display: none;
+}
+
+/* Texte dans le slide */
+
+#h1_text {
+    position: absolute;
+    top: 20%;
+    left: 105px;
+
+}
+
+.wa {
+    color: #5cadd3;
+    font-family: 'robotobold', serif;
+}
+
+h1 {
+    font-family: 'robotobold', cursive;
+    font-size: 2.7em;
+    line-height: 0.95em;
+    color: white;
+    margin-bottom: -5px;
+}
+
+h1 + p {
+    color: white;
+    font-family: 'robotoregular', cursive;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* Boutton " Plus d'infos " */
+
+#more_info {
+    position: absolute;
+    border: 0px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 90px;
+    text-align: center;
+    background-color: #5cadd3;
+    box-shadow: 1px 1px 2px gray;
+}
+
+#more_info a {
+    color: white;
+    text-decoration-line: none;
+    font-size: 1em;
+    font-family: 'robotobold', cursive;
+}
+
+#more_info:hover {
+    background-color: #363636;
+}
+
+/* ************************************************************************************************ */
+
+/* Partie n°3  " Nos services " */
+
+/* ************************************************************************************************ */
+
+#services {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+/* en tête "nos services" */
+
+#head_services {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#head_services p {
+    text-align: center;
+}
+
+/* decoration du point bleu sous le titre */
+
+.deco_circle {
+    width: 200px;
+    height: 50px;
+    margin: 50px 0;
+    text-align: center;
+    font-size: 28px;
+    position: relative;
+    margin: 0;
+}
+
+.deco_circle:after {
+    content: '';
+    width: 100%;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.22);
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: 1;
+}
+
+#head_services i {
+    position: inherit;
+    color: #5cadd3;
+    text-align: center;
+    padding: 3px;
+    border: 0px solid;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 13px;
+    z-index: 3;
+}
+
+/* corps "nos services */
+
+#body_services {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-auto-flow: column;
+}
+
+#img_pc {
+    grid-row: 1/6;
+    grid-column: 2;
+}
+
+#description_services {
+    grid-row: 3/7;
+    grid-column: 4/12;
+}
+
+h4 {
+    font-family: 'robotobold', serif;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+h4 + p {
+    margin: 0;
+    line-height: 1.5em;
+}
+
+/* "Icone pour les differentes parties ux, ui et seo" */
+
+.fa-line-chart {
+    position: relative;
+    color: #5cadd3;
+    padding: 16px;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+
+.fa-cubes {
+    position: relative;
+    color: #5cadd3;
+    padding: 16px;
+    border: 2px solid lightgray;
+    border-radius: 55%;
+    font-size: 1.4em;
+}
+
+.fa-pie-chart {
+    position: relative;
+    color: #5cadd3;
+    padding: 16px;
+    border: 2px solid lightgray;
+    border-radius: 50%;
+    font-size: 1.5em;
+}
+
+.fa-circle {
+    position: absolute;
+    color: #5cadd3;
+    padding: 5px;
+    margin-left: 5px;
+    border: 0px solid;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 12px;
+}
+
+/* regle des differentes parties ux, ui et seo */
+
+/* UX */
+
+#ux_ico {
+    padding-top: 40px;
+}
+
+#ux_design {
+    display: flex;
+}
+
+#ux_text {
+    padding-left: 15px;
+
+}
+
+/* UI */
+
+#ui_ico {
+    padding-top: 40px;
+}
+
+#ui_design {
+    display: flex;
+}
+
+#ui_text {
+    padding-left: 15px;
+}
+
+/* SEO */
+
+#seo_ico {
+    padding-top: 40px;
+}
+
+#seo_design {
+    display: flex;
+}
+
+#seo_text {
+    padding-left: 15px;
+}
+
+/* ************************************************************************************************ */
+
+/* Paartie n°4 "Nos projet (Portofolio) " */
+
+/* ************************************************************************************************ */
+
+#projet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #e5e5e5;
+    margin: 25px 0 25px 0;
+    padding-bottom: 25px;
+    overflow: hidden;
+}
+
+/* en-tête */
+
+#head_projet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* point bleu sous le titre */
+
+#projet .fa-circle {
+    position: inherit;
+    color: #5cadd3;
+    text-align: center;
+    padding: 3px;
+    border: 0px solid;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 13px;
+    z-index: 3;
+}
+
+#head_projet p {
+    text-align: center;
+}
+
+/* barre de navigation */
+
+#navbar_projet {
+    padding: 0;
+}
+
+#navbar_projet ul {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 0;
+    list-style-type: none;
+    border: 0px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+#navbar_projet li {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 100px;
+    text-align: center;
+    padding: 0;
+}
+
+/* petite fleche sous chaque élément de la barre "au survol" */
+
+.fa-caret-down {
+    display: none;
+}
+
+#navbar_projet li:hover .fa-caret-down {
+    display: block;
+    font-size: 1.5em;
+    padding-top: 11px;
+    color: #0b72a2;
+}
+
+#navbar_projet a {
+
+    padding-top: 18px;
+    text-decoration-line: none;
+    color: black;
+}
+
+#navbar_projet li:hover a {
+    color: white;
+}
+
+/* regle des bordures de chaque élémement de la barre*/
+
+#all_works:hover {
+    background-color: #5cadd3;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: 3px solid #0b72a2;
+}
+
+#creative:hover {
+    background-color: #5cadd3;
+    border-bottom: 3px solid #0b72a2;
+}
+
+#corporate:hover {
+    background-color: #5cadd3;
+    border-bottom: 3px solid #0b72a2;
+}
+
+#p_portfolio:hover {
+    background-color: #5cadd3;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 3px solid #0b72a2;
+}
+
+/* portfolio */
+
+#portfolio {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-auto-flow: row;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+}
+
+#portfolio figure {
+    position: relative;
+    margin: 0;
+    z-index: 0;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    background-color: #ccc;
+}
+
+
+#portfolio figure img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+/* affichage de la legende "au survol" */
+
+#portfolio figure figcaption {
+    position: absolute;
+    display: block;
+    height: 50px;
+    right: 0;
+    bottom: -100px;
+    left: 0px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    opacity: 0.7;
+    transition: top 0.4s linear, bottom 0.4s linear;
+    line-height: 1.7;
+}
+
+#portfolio figure:hover figcaption {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+
+/* Icone de l'oeil dans la legende */
+
+#portfolio i {
+    top: -18px;
+    right: 10px;
+    padding: 12px;
+    font-size: 12px;
+    position: absolute;
+    color: white;
+    background-color: #0a84be;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+/* ************************************************************************************************ */
+
+/* Partie n°5 " Contact et carte " */
+
+/* ************************************************************************************************ */
+
+#contact {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+
+/* calque bleu par dessus la carte */
+
+#calque_map {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    z-index: 50;
+    background-color: #5cadd3;
+    opacity: 0.3;
+}
+
+/* regle de la carte */
+
+iframe {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    border: 0;
+}
+
+/* Contact */
+
+h3 {
+    font-family: 'robotobold', cursive;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+h6 {
+    font-family: 'robotoregular', cursive;
+
+    margin: 0;
+}
+
+#wa_form {
+    font-weight: 900;
+}
+
+form {
+    width: 300px;
+    height: 465px;
+    z-index: 75;
+    position: absolute;
+    margin-top: 80px;
+    right: 150px;
+    border: 0 solid white;
+    border-radius: 5px;
+    background-color: rgba(211, 211, 211, 0.80);
+    padding: 20px 30px 30px 30px;
+    /*opacity: 0.8;*/
+    overflow: hidden;
+
+}
+
+form input {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+
+#c_message {
+    padding-bottom: 150px;
+}
+
+/* Boutton " Send message " */
+
+#send_message {
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #5cadd3;
+    box-shadow: 1px 1px 2px gray;
+    cursor: pointer;
+}
+
+/* ************************************************************************************************ */
+
+/* Partie n°6 : "FOOTER" */
+
+/* ************************************************************************************************ */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #00537b;
+    margin-top: 25px;
+}
+
+/* logo webagency */
+
+footer img {
+    width: auto;
+    height: 30px;
+    padding: 2px 0 2px 0;
+}
+
+footer p {
+    color: white;
+    margin: 0 0 0 0;
+}
+
+/* lien "Mentions légales" */
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: gray;
+}
+
+/* ************************************************************************************************ */
+
+/* Partie n°7 : MEDIA QUERIES */
+
+/* ************************************************************************************************ */
+
+@media only screen and (max-width:1275px) {
+    #portfolio {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-auto-flow: row;
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+    }
+    #portfolio p {
+        width: 350px;
+        height: 225px;
+    }
+    form {
+        right: 100px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+
+    /* Partie n°1 */
+    #logo {
+        padding: 0 0 0 25px;
+    }
+    #navbar ul {
+        padding: 41px 0 30px 0;
+    }
+
+    #h1_text {
+        top: 8%;
+        left: 30px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    /* Partie n°3 */
+    #img_pc {
+        display: none;
+    }
+
+    /* Partie n°4 */
+    #portfolio {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-auto-flow: row;
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+    }
+    form {
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+
+
+    #portfolio p {
+        width: 300px;
+        height: 200px;
+    }
+
+    form {
+        display: block;
+        margin-top: 800px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding: 0 0 25px 0;
+        border-radius: 0;
+        text-align: center;
+    }
+    form input {
+        width: 450px;
+    }
+    footer {
+        margin-top: 500px;
+    }
+}
+
+@media only screen and (min-width:641px) {
+    #toggle_menu {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:640px) {
+
+    /* Regle général */
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h4 {
+        font-size: 0.8em;
+    }
+    p {
+        font-size: 0.8em;
+    }
+
+    /* Partie n°1 Header */
+    header {
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        position: static;
+    }
+    #logo {
+        padding: 10px 0px 5px 0px;
+    }
+    #logo img {
+        width: 80%;
+    }
+    #navbar ul {
+        width: 100%;
+        padding: 35px 0px 30px 0;
+    }
+    #navbar li a {
+        padding: 25px 10px 0px 10px;
+    }
+
+    #img_mobile {
+        display: block;
+    }
+
+    /* Menu "Hamburger" */
+    label {
+        cursor: pointer;
+    }
+    label i {
+        padding: 7px 9px 7px 9px;
+        background-color: #5cadd3;
+        border-radius: 5px;
+        font-size: 1.3em;
+    }
+    #toggle_menu {
+        margin: 18px 0 0 0;
+        padding-right: 10px;
+    }
+    #menu-toggle {
+        display: none;
+    }
+    #menu {
+        display: none;
+        padding: 0;
+    }
+    #menu li {
+        list-style: none;
+        background-color: lightgray;
+        padding: 2px 3px 2px 3px;
+        text-align: center;
+    }
+    #menu li a {
+        text-decoration: none;
+        color: black;
+    }
+    #menu li:hover {
+        background-color: #5cadd3;
+    }
+    #menu li:hover a {
+        color: white;
+    }
+
+    #menu-toggle:checked + #menu {
+        display: block;
+
+    }
+    #navbar {
+        display: none;
+    }
+
+    /* Partie n°2 Slider */
+    #img_mobile img {
+
+        width: 100%;
+        height: auto;
+    }
+    .slider {
+        display: none;
+    }
+    #slideshow {
+        height: auto;
+        margin: 0;
+    }
+
+    #slideshow i {
+        display: none;
+    }
+
+    #h1_text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        left: 0px;
+    }
+    #more_info {
+        position: relative;
+    }
+    #h1_text p {
+        color: black;
+    }
+    h1 {
+        color: black;
+    }
+
+    /* Parite n°3 */
+    #services {
+        margin: 0;
+    }
+    #head_services {
+        margin: 0;
+    }
+    #img_pc {
+        display: none;
+    }
+    #description_services {
+        grid-row: 4/7;
+        grid-column: 2/12;
+    }
+
+    /* Partie n°4 */
+    #navbar_projet {
+        display: flex;
+        width: 320px;
+    }
+    #portfolio {
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-auto-flow: row;
+        grid-row-gap: 15px;
+        grid-column-gap: 25px;
+
+    }
+    #navbar_projet a {
+        font-size: 0.9em;
+    }
+
+    /*partie n°5 portfolio*/
+    form input {
+        width: 250px;
+    }
+
+    /*partie n°6 FOOTER*/
+    footer img {
+        display: none;
+    }
+
+    footer a {
+        font-size: 0.8em;
+    }
+
+}
